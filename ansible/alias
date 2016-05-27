@@ -1,2 +1,3 @@
 # ansible
-alias dan='docker run --rm -it -v ~/Projects/ansible:/etc/ansible -v ~/.ssh:/root/.ssh -w /etc/ansible netw0rm/ansible sh'
+alias ans='docker attach ansible'
+alias dan='docker run --rm --name ansible -it -v ~/Projects/ansible:/etc/ansible -v ~/.ssh:/root/.ssh -w /etc/ansible netw0rm/ansible sh'
