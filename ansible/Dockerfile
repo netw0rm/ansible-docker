@@ -5,7 +5,7 @@
 
 
 # pull base image
-FROM alpine:3.3
+FROM alpine:latest
 
 MAINTAINER Shawn <qiusct@gmail.com>
 
