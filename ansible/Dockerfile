@@ -11,13 +11,13 @@ MAINTAINER Shawn <qiusct@gmail.com>
 
 
 RUN echo "===> Adding Python runtime..."  && \
-    apk --update add python py-pip openssl ca-certificates libffi-dev    && \
+    apk --update add python py-pip openssl ca-certificates libffi-dev libssl-dev    && \
     apk --update add --virtual build-dependencies python-dev build-base  && \
     pip install --upgrade pip                                            && \
     \
     \
-    echo "===> Installing Ansible..."  && \
-    pip install ansible                && \
+    echo "===> Installing Ansible..."         && \
+    pip install ansible pywinrm               && \
     \
     \
     echo "===> Removing package list..."  && \
