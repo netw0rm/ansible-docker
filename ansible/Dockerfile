@@ -9,9 +9,9 @@ MAINTAINER Shawn <qiusct@gmail.com>
 
 
 RUN echo "===> Adding Python runtime..."  && \
-    apk --update add python py-pip openssl ca-certificates                      && \
-    apk --update add --virtual build-dependencies build-base libssl-dev libffi-dev python-dev && \
-    pip install -upgrade pip                                                   && \
+    apk --update add python py-pip openssl ca-certificates  && \
+    apk --update add --virtual build-dependencies build-base openssl-dev libffi-dev python-dev  && \
+    pip install -upgrade pip    && \
     \
     \
     echo "===> Installing Ansible..."         && \
