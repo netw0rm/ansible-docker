@@ -11,7 +11,7 @@ MAINTAINER Shawn <qiusct@gmail.com>
 
 
 RUN echo "===> Adding Python runtime..."  && \
-    apk --update add python py-pip openssl ca-certificates libffi-dev openssl-devel    && \
+    apk --update add python py-pip openssl ca-certificates libffi-dev    && \
     apk --update add --virtual build-dependencies python-dev build-base  && \
     pip install --upgrade pip                                            && \
     \
