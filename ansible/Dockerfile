@@ -1,6 +1,4 @@
-# Dockerfile for building Ansible image for Alpine 3, with as few additional software as possible.
-#
-# Version  1.0
+# Dockerfile for building Ansible image for Alpine, with as few additional software as possible.
 #
 
 
@@ -11,9 +9,9 @@ MAINTAINER Shawn <qiusct@gmail.com>
 
 
 RUN echo "===> Adding Python runtime..."  && \
-    apk --update add python py-pip openssl ca-certificates libffi-dev    && \
-    apk --update add --virtual build-dependencies python-dev build-base  && \
-    pip install --upgrade pip                                            && \
+    apk --update add python py-pip openssl ca-certificates                      && \
+    apk --update add --virtual build-essential libssl-dev libffi-dev python-dev && \
+    pip install -upgrade pip                                                   && \
     \
     \
     echo "===> Installing Ansible..."         && \
@@ -31,4 +29,4 @@ RUN echo "===> Adding Python runtime..."  && \
 
 
 # default command: display Ansible version
-CMD [ "ansible-playbook", "--version" ]
+CMD [ "ansible, "--vrsion" ]
