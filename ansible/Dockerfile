@@ -29,4 +29,4 @@ RUN echo "===> Adding Python runtime..."  && \
 
 
 # default command: display Ansible version
-CMD [ "ansible, "--vrsion" ]
+CMD [ "ansible", "--vrsion" ]
