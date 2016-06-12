@@ -19,7 +19,7 @@ RUN echo "===> Adding Python runtime..."  && \
     \
     \
     echo "===> Removing package list..."  && \
-    apk del build-dependencies            && \
+    apk del build-dependencies build-base openssl-dev libffi-dev python-dev && \
     rm -rf /var/cache/apk/*               && \
     \
     \
