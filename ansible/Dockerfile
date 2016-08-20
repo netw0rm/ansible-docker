@@ -15,7 +15,7 @@ RUN echo "===> Adding Python runtime..."  && \
     \
     \
     echo "===> Installing Ansible..."         && \
-    pip install ansible pywinrm               && \
+    pip install ansible pywinrm docker-py     && \
     \
     \
     echo "===> Removing package list..."  && \
